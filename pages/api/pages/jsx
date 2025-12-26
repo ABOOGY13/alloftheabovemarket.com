@@ -1,0 +1,7 @@
+<div key={l._id} className="border p-4 rounded shadow">
+  <h3 className="font-bold">{l.title}</h3>
+  <p>{l.description}</p>
+  <p className="font-bold mt-2">${l.price}</p>
+  <p className="text-sm mt-1">Seller: {l.user.name}</p>
+  <button onClick={() => handleBuy(l._id)} className="bg-green-500 text-white px-3 py-1 mt-2 rounded">Buy Now</button>
+</div>

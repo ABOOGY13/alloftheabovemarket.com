@@ -1,0 +1,13 @@
+<li key={r._id} className="border rounded shadow hover:shadow-lg transition overflow-hidden">
+  {r.listing.images && r.listing.images[0] && (
+    <img src={r.listing.images[0]} alt={r.listing.title} className="w-full h-40 object-cover" />
+  )}
+  <div className="p-3">
+    <strong>{r.listing.title}</strong>
+    <p>Ticket: ${r.ticketPrice}</p>
+    <p>Status: {r.status}</p>
+    {r.status === "completed" && r.winner && (
+      <p className="text-green-600">Winner: {r.winner.name}</p>
+    )}
+  </div>
+</li>
