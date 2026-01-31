@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 function Layout({ children }) {
   return (
@@ -26,6 +27,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Component {...pageProps} />
+      <SpeedInsights />
     </Layout>
   );
 }
